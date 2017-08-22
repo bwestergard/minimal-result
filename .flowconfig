@@ -1,0 +1,8 @@
+[ignore]
+lib/.*
+.*/node_modules/babel*
+.*/node_modules/flow*
+.*/node_modules/kefir*
+
+[include]
+flow-typed
