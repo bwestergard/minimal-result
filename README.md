@@ -16,7 +16,7 @@ A function should return a `Result` when errors are expected and recoverable.
 
 Consider a parsing function that accepts a string and returns an abstract syntax tree (`(s: string) => AST`). If the string cannot be parsed - if it is malformed - the function should return an error indicating which line/character the error occurs on. If it can be parsed, it ought to return an AST. In other words, the function should have the type `(s: string) => Result<AST,ParseError>` where `ParseError` might resemble `{ explanation: string, line: number, character: number }`.
 
-For more on the Result types, see [the Rust documentation](https://doc.rust-lang.org/std/result/) and the [`r-result`](https://github.com/Havvy/result#rationale-and-rant-on-error-handling) rationale section.
+For more on the Result types, see [the Rust documentation](https://doc.rust-lang.org/std/result/) and the [`r-result` rationale section](https://github.com/Havvy/result#rationale-and-rant-on-error-handling).
 
 [`r-result`](https://github.com/Havvy/result) is a similar javascript library. The publication of `minimal-result` was motivated by a desire for a library which:
 
