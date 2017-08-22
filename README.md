@@ -37,7 +37,7 @@ For more on the Result types, see [the Rust documentation](https://doc.rust-lang
   - Type: `<Data, NewData, Error>(result: Result<Data, Error>, f: Data => Result<NewData, Error>) => Result<NewData, Error>`
 
 - `mapOk`
-  - Purpose: Apply a function to the `Data` value within a `Result` if it is `Ok`, wrap the result in an `Ok`. `Err` falls through. 
+  - Purpose: Apply a function to the `Data` value within a `Result` if it is `Ok`, wrap the result in an `Ok`. `Err` falls through.
   - Type: `<Data, Error, NewData>(result: Result<Data, Error>, f: Data => NewData) => Result<NewData, Error>`
 - `mapErr`
   - Type: `<Data, NewError, Error>(result: Result<Data, Error>, f: Error => NewError) => Result<Data, NewError>`
@@ -52,3 +52,7 @@ For more on the Result types, see [the Rust documentation](https://doc.rust-lang
 # License
 
 MIT
+
+# Contributors
+
+[Joshua Yanovski](https://github.com/pythonesque), [Björn Westergard](https://github.com/bwestergard).
