@@ -53,6 +53,23 @@ export const collectResultMap = <MapVal, Data, Error>(oldMap: { [key: string]: M
   return Ok(newMap)
 }
 
+const collectResultMapKeyed = <MapVal, Data, Error>(
+  oldMap: { [key: string]: MapVal },
+  f: (string, MapVal) => Result<Data, Error>
+) : Result<{ [key: string]: Data }, Error> => {
+  const newMap: { [key: string]: Data } = {}
+  for (const label in oldMap) {
+    const oldValue = oldMap[label]
+    const newValue = f(label, oldValue)
+    if (newValue.tag === 'Ok') {
+      newMap[label] = newValue.data
+    } else {
+      return Err(newValue.err)
+    }
+  }
+  return Ok(newMap)
+}
+
 export const collectResultArray = <ArrayVal, Data, Error>(oldArray: ArrayVal[], f: ArrayVal => Result<Data, Error>) : Result<Data[], Error> => {
   const newArray: Data[] = []
   for (const oldValue of oldArray) {
@@ -63,5 +80,21 @@ export const collectResultArray = <ArrayVal, Data, Error>(oldArray: ArrayVal[], 
       return Err(newValue.err)
     }
   }
+  return Ok(newArray)
+}
+
+const collectResultArrayIndexed = <ArrayVal, Data, Error>(
+  oldArray: ArrayVal[],
+  f: (index: number, val: ArrayVal) => Result<Data, Error>
+) : Result<Data[], Error> => {
+  const newArray: Data[] = []
+  oldArray.forEach((val, index) => {
+    const newVal = f(index, val)
+    if (newVal.tag === 'Ok') {
+      newArray.push(newVal.data)
+    } else {
+      return newVal
+    }
+  })
   return Ok(newArray)
 }
