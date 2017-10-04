@@ -53,7 +53,7 @@ export const collectResultMap = <MapVal, Data, Error>(oldMap: { [key: string]: M
   return Ok(newMap)
 }
 
-const collectResultMapKeyed = <MapVal, Data, Error>(
+export const collectResultMapKeyed = <MapVal, Data, Error>(
   oldMap: { [key: string]: MapVal },
   f: (string, MapVal) => Result<Data, Error>
 ) : Result<{ [key: string]: Data }, Error> => {
@@ -83,7 +83,7 @@ export const collectResultArray = <ArrayVal, Data, Error>(oldArray: ArrayVal[], 
   return Ok(newArray)
 }
 
-const collectResultArrayIndexed = <ArrayVal, Data, Error>(
+export const collectResultArrayIndexed = <ArrayVal, Data, Error>(
   oldArray: ArrayVal[],
   f: (index: number, val: ArrayVal) => Result<Data, Error>
 ) : Result<Data[], Error> => {
