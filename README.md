@@ -20,9 +20,8 @@ For more on the Result types, see [the Rust documentation](https://doc.rust-lang
 
 [`r-result`](https://github.com/Havvy/result) is a similar javascript library. The publication of `minimal-result` was motivated by a desire for a library which:
 
-- Had simple flow types, and was published with them.
-- Exposed an API for use with with serializable plain objects, rather than object/method call style. It is felt that this aides in debugging.
-- Exposed a minimal and stable API.
+- Has simple flow types, and is published with them.
+- Offers a static function, rather than method-based API.
 
 # API
 
