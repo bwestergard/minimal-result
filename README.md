@@ -46,6 +46,8 @@ For more on the Result types, see [the Rust documentation](https://doc.rust-lang
   - Type: `<MapVal, Data, Error>(oldMap: { [key: string]: MapVal }, f: (string, MapVal) => Result<Data, Error>) => Result<{ [key: string]: Data }, Error>`
 - `collectResultArray`
   - Type: `<ArrayVal, Data, Error>(oldArray: ArrayVal[], f: ArrayVal => Result<Data, Error>) => Result<Data[], Error>`
+- `collectResultArrayIndexed`
+  - Type: `<ArrayVal, Data, Error>(oldArray: ArrayVal[], f: (index: number, val: ArrayVal) => Result<Data, Error>) : Result<Data[], Error>`
 
 
 # License
