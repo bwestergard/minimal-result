@@ -56,4 +56,4 @@ MIT
 
 # Contributors
 
-[Joshua Yanovski](https://github.com/pythonesque), [Björn Westergard](https://github.com/bwestergard).
+[Joshua Yanovski](https://github.com/pythonesque), [Björn Westergard](https://github.com/bwestergard), [Lougenia Bailey](https://github.com/lougeniac64).
