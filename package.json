@@ -33,7 +33,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lanetix/minimal-result.git"
+    "url": "git+ssh://git@github.com/bwestergard/minimal-result.git"
   },
   "bugs": {
     "url": "https://github.com/bwestergard/minimal-result/issues"
