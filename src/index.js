@@ -71,13 +71,13 @@ export const collectResultArrayIndexed = <+ArrayVal, +Data, +Error>(
   f: (index: number, val: ArrayVal) => Result<Data, Error>
 ) : Result<Data[], Error> => {
   const newArray: Data[] = []
-  oldArray.forEach((val, index) => {
-    const newVal = f(index, val)
-    if (newVal.tag === 'Ok') {
-      newArray.push(newVal.data)
+  for (let i = 0; i < oldArray.length; i++) {
+    const newValue = f(i, oldArray[i])
+    if (newValue.tag === 'Ok') {
+      newArray.push(newValue.data)
     } else {
-      return newVal
+      return newValue
     }
-  })
+  }
   return Ok(newArray)
 }
