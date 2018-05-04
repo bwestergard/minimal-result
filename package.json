@@ -24,20 +24,19 @@
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "flow-copy-source": "^1.2.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "babel-preset-env": "^1.6.0"
   },
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {
-    "babel-preset-env": "^1.6.0"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lanetix/minimal-result.git"
   },
   "bugs": {
-    "url": "https://github.com/lanetix/minimal-result/issues"
+    "url": "https://github.com/bwestergard/minimal-result/issues"
   },
-  "homepage": "https://github.com/lanetix/minimal-result#readme"
+  "homepage": "https://github.com/bwestergard/minimal-result#readme"
 }
