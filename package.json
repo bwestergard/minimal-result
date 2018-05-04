@@ -1,6 +1,6 @@
 {
   "name": "minimal-result",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal, Flow-typed, Rust-style Result library for functional exception handling.",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lanetix/minimal-result.git"
+    "url": "git+ssh://git@github.com/bwestergard/minimal-result.git"
   },
   "bugs": {
     "url": "https://github.com/bwestergard/minimal-result/issues"
